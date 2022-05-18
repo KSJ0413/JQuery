@@ -31,12 +31,13 @@ JQuery
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script>
-     $(function () {
-      $("dd:not(:first)").css("display", "none");
-      $("dl dt").click(function () {
+     $(function () {//로딩
+      $("dd:not(:first)").css("display", "none");// 처음 dd태그 제외한 dd태그들을 화면에 없앤다?
+      $("dl dt").click(function () {// di안에있는 dt 클릭시 
         if ($("+dd", this).css("display") == "none") {
-          $(this).siblings("dd").slideUp("slow");
-          $("+dd", this).slideDown("slow");
+        // 만약에 dd태그 뒤에 this-->(click(function)) 클릭했을떄 화면에 아무것도 없다면? 
+          $(this).siblings("dd").slideUp("slow");//this(클릭)dd의 형제자매(siblings)를 천천히 올린다
+          $("+dd", this).slideDown("slow");//this(클릭) 시 dd태그 뒤에 있는 dd를 천천히 내린다
         }
       });
     });

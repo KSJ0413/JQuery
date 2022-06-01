@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style>
+    p{
+        background-color: yellow;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 5px;
+    }
+    p.over{
+        color: red;
+    }
+</style>
+<script src='https://code.jquery.com/jquery-latest.min.js'></script>
+<script>
+$(function () {
+    let count=0;
+    $('body').on('click','p', function(){
+        $(this).after('<p>Anotehr paragraph!'+(++count)+"</p>");
+    })
+});
+</script>
+</head>
+<body>
+<p>Click me!</p>
+</body>
+</html>

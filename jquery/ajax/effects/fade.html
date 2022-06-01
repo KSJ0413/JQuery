@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style>  div {
+    width:80px;height:80px;display:none;
+}
+div#div1{
+    background-color:red;
+}
+div#div2{
+    background-color:green;
+}
+div#div3{
+    background-color:blue;
+}</style>
+<script src='https://code.jquery.com/jquery-latest.min.js'></script>
+<script>
+$(function () {
+$('button').first().click(function(){
+    $('#div1').fadeln();
+    $('#div2').fadeln('slow');
+    $('#div3').fadeln(3000);
+});
+$('button').last().click(function(){
+    $('#div1').fadeout();
+    $('#div2').fadeout('slow');
+    $('#div3').fadeout();
+
+});
+});
+</script>
+</head>
+<body>
+    <p>Demonstrate fadeIn()/fadeOut with different parameters.</p>
+    <button>Click to fade im boxes</button><br>
+    <button>Click to fade im boxes</button><br><br>
+
+    <div id="div1"></div>
+    <br>
+    <div id="div2"></div>
+    <br>
+    <div id="div3"></div>
+    
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style></style>
+<script src='https://code.jquery.com/jquery-latest.min.js'></script>
+<script>
+function requestClick() {
+    
+    let param = $('#frmSungjuk').serialize();
+    console.log(`param:${param}`);
+    $.post(
+        'get.jsp',
+        param,function(data){
+            display(data);
+        },'json')
+        .fail(function(){
+            alert(`드록바가 죽었다`);
+        });
+}
+function display(result){
+    $('#panel').text('').append(
+    `성명:${result.name} 
+     국어:${result.kuk}
+     영어:${result.eng}
+     총점:${result.tot}
+     평균:${result.avg}`
+     );
+    
+}
+</script>
+</head>
+<body>
+<div id="panel"></div>
+<hr>
+<form action="" id="frmSungjuk">
+    성명:<input type="text" name="name" value="가길동">
+    국어:<input type="text" name="kuk" value="80">
+    영어:<input type="text" name="eng" value="100">
+    <button type="button" onclick="requestClick()">성적계산</button>
+</form>
+</body>
+</html>

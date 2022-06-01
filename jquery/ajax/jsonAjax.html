@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style>
+    table, td{
+        border : 1px solid gray;
+    }
+</style>
+<script src='https://code.jquery.com/jquery-latest.min.js'></script>
+<script>
+$(function () {
+$.ajax({
+    url:'test.jsp',
+    dataType:'json',
+    success:function(data){
+    console.log(data);
+    result = data;
+    
+    console.log('Call Back Call: ' + result.name);
+        $('#panel').append(
+            "<tr>" +
+                        "<td>이름</td>" +
+                        "<td>아이디</td>" +
+                        "<td>국어</td>" +
+                        "<td>영어</td>" +
+                        "</tr>" +
+                        "<tr>" +
+                        "<td>" + result.name + "</td>" +
+                        "<td>" + result.id + "</td>" +
+                        "<td>" + result.kuk + "</td>" +
+                        "<td>" + result.eng + "</td>" +
+                        "</tr>"
+        );
+
+    },statusCode:{
+        404:function(){
+            alert('apge not found');
+        },
+        500:function(){
+            alert("sever error");
+        }
+    }
+});
+});
+</script>
+</head>
+<body>
+<table id="panel"></table>
+</body>
+</html>

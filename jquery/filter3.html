@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style></style>
+<script src='https://code.jquery.com/jquery-latest.min.js'></script>
+<script>
+$(function () {
+$(":Header").css({background:'#ccc',color:'blue'});
+$( "div:contains('John')" ).css( "text-decoration", "underline" );
+$( "div:has(p)" ).addClass( "test" );
+$( "td:parent" ).fadeTo( 1000, 0.3 );
+});
+</script>
+<style>
+    .test{
+border:3px inset red;
+    }
+    
+  td {
+    width: 40px;
+    background: pink;
+  }
+  
+</style>
+</head>
+<body>
+<H1>Header 1</H1>
+<p>Conrents 1</p>
+<h2>Header 2</h2>
+<p>Contents 2</p>
+
+<div>John Resing</div>
+<div>George Martin</div>
+<div>Malcom John Sinclair</div>
+<div><p>J. Ohn</p></div>
+
+<table>
+    <tr><td>Value 1</td><td></td></tr>
+    <tr><td>Value 2</td><td></td></tr>
+</table>
+</body>
+</html>

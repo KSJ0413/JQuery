@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style>
+    div{
+        background-color: #de9a44;
+        margin: 3px;
+        width: 80px;
+        height: 900px;
+        display: none;
+        float: left;
+    }
+    p{
+       font-size: 90px;
+    }
+    button{
+        font-size: 90px;
+    }
+</style>
+<script src='https://code.jquery.com/jquery-latest.min.js'></script>
+<script>
+$(function () {
+$(document.body).click(function(){
+    if($('div').first().is(':hidden')){
+    $('div').slideDown('slow');
+    }else{
+$('div').slideUp('slow');
+    }
+})
+$("button").click(function(){
+        $('p').slideToggle('slow');
+    });
+});
+</script>
+</head>
+<body>
+    <button>Toggle</button>
+    <p>Click me!</p>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> new document </title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.2.js"></script>
+	<script type="text/javascript">
+	$(document).on("click", ".question", function(e) {
+		$(this).next().show().closest("dl").siblings("dl").find(".answer").hide();
+	});
+	</script>
+	<style>
+	.answer {display:none;}
+	</style>
+</head>
+<body>
+<dl>
+	<dt class="question">질문입니다</dt>
+	<dd class="answer">답변입니다</dd>
+</dl>
+<dl>
+	<dt class="question">질문입니다</dt>
+	<dd class="answer">답변입니다</dd>
+</dl>
+<dl>
+	<dt class="question">질문입니다</dt>
+	<dd class="answer">답변입니다</dd>
+</dl>
+<dl>
+	<dt class="question">질문입니다</dt>
+	<dd class="answer">답변입니다</dd>
+</dl>
+</body>
+</html>

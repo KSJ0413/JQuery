@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style></style>
+<script src='https://code.jquery.com/jquery-latest.min.js'></script>
+<script>
+$(function () {
+$("[title^='f']").css('color','pink');
+// $("input[name $='letter']").val('점점 어려워진다!!!');
+// $("input[name *= 'man']").val("has man in it!");
+// $("input[name ~= 'man']").val("mr. man is in it!");
+$("input[name|='man']").val("man-news find")
+
+
+});
+</script>
+</head>
+<body>
+<ul>
+    <li title="first">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li title="second">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li title="third">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li title="fourth">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+
+    <input type="text" name="man-news">
+    <input type="text" name="milk man">
+    <input type="text" name="letterman2">
+    <input type="text" name="newmilk">
+</ul>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style></style>
+<script src='https://code.jquery.com/jquery-latest.min.js'></script>
+<script>
+$(function () {
+$("body").find('div').eq(2).addClass('pink');
+$("body").find('div').slice(0,2).css('background-color','yellow');
+$("body").find("div").slice(3).css("background-color","orange");
+});
+</script>
+<style>
+    div{
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        float: left;
+        border: 2px solid pink;
+    }
+    .pink{
+        background-color: pink;
+    }
+</style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

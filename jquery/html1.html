@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style></style>
+<script src='https://code.jquery.com/jquery-latest.min.js'></script>
+<script>
+$(function () {
+    $("p").click(function () {
+       let htmlString = $(this).html();
+       $(this).text(htmlString);
+      });
+});
+</script>
+<style>
+p {
+    margin: 8px;
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+}
+b {
+    text-decoration: underline;
+}
+button {
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<p><b>Click</b>to change the<span id="tag">html</span></p>
+<p>to a <span id="text">text</span>node.</p>
+<p>
+    This <button name="nada">button</button> does nothing.
+  </p>
+</body>
+</html>

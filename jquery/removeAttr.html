@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<style>
+    p{
+        margin: 8px;
+        font-size: 16px;
+    }
+    .selected{
+        color: blue;
+    }
+    .highlight{
+        background-color: yellow;
+    }
+</style>
+<script src='https://code.jquery.com/jquery-latest.min.js'></script>
+<script>
+$(function () {
+$("a").first().attr('href','https://daum.net').text($('a').attr('href'));
+$("a").last().removeAttr("target")
+
+$("P").addClass('selected');
+// $("P").first().removeClass('selected').addClass('highlight');
+$("p").first().attr("class",'highlight');
+
+});
+</script>
+</head>
+<body>
+<a href="" href="https://naver.com">링크</a>
+
+<a href="hhtps://naver.com" target="_blank">링크</a>
+
+<p>Hello</p>
+<p>and</p>
+<P>Goodbye</P>
+</body>
+</html>
